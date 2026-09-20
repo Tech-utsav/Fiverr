@@ -1,0 +1,52 @@
+/* visitors.css — slim visitor-counter bar shown at the top of every page */
+
+.visitor-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: #151a3d;
+  color: #d9ddf3;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.visitor-bar[hidden] {
+  display: none;
+}
+
+.visitor-bar__dot {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #3ddc84;
+  animation: visitor-pulse 2s infinite;
+}
+
+.visitor-bar__count {
+  color: #ffc933;
+  font-size: 1rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes visitor-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(61 220 132 / 0.6);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 0.5rem rgb(61 220 132 / 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visitor-bar__dot {
+    animation: none;
+  }
+}
