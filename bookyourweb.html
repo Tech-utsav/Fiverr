@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Your Website | Utsav Malik</title>
+  <meta name="description" content="Order a custom website from Utsav Malik. Fill in the form and get a reply on email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bookyourweb.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">Utsav Malik</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="bookyourweb.html" aria-current="page">Book Your Order</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+
+    <section class="intro">
+      <h1>Tell me what website you need.</h1>
+      <p class="lead">Fill in the order form. It lands straight in my inbox, and I reply to you by email with next steps.</p>
+
+      <ol class="steps">
+        <li><strong>You send the order.</strong> The more detail, the better.</li>
+        <li><strong>I review it</strong> and email you a plan and a price.</li>
+        <li><strong>We agree, I build,</strong> and you get a live website.</li>
+      </ol>
+
+      <p class="alt">Prefer to talk first? Go to the <a href="contact.html">contact page</a>.</p>
+    </section>
+
+    <section class="order" aria-labelledby="form-title">
+      <h2 id="form-title">Order form</h2>
+
+      <form id="orderForm" novalidate>
+        <!-- Web3Forms settings -->
+        <input type="hidden" name="access_key" value="9f72351b-9f76-41ce-94e6-8e4719533db4">
+        <input type="hidden" name="subject" value="New Website Order">
+        <input type="hidden" name="from_name" value="Website Order Form">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <fieldset>
+          <legend>About you</legend>
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your website</legend>
+
+          <div class="field">
+            <label for="type">What kind of website?</label>
+            <select id="type" name="website_type" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Personal portfolio</option>
+              <option>Business website</option>
+              <option>Online store</option>
+              <option>Blog</option>
+              <option>Landing page</option>
+              <option>Something else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <span class="label" id="pages-label">Pages you need</span>
+            <div class="chips" role="group" aria-labelledby="pages-label">
+              <label class="chip"><input type="checkbox" name="pages" value="Home"><span>Home</span></label>
+              <label class="chip"><input type="checkbox" name="pages" value="About"><span>About</span></label>
+              <label class="chip"><input type="checkbox" name="pages" value="Services"><span>Services</span></label>
+              <label class="chip"><input type="checkbox" name="pages" value="Portfolio"><span>Portfolio</span></label>
+              <label class="chip"><input type="checkbox" name="pages" value="Contact"><span>Contact</span></label>
+              <label class="chip"><input type="checkbox" name="pages" value="Blog"><span>Blog</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label" id="features-label">Extras</span>
+            <div class="chips" role="group" aria-labelledby="features-label">
+              <label class="chip"><input type="checkbox" name="features" value="Contact form"><span>Contact form</span></label>
+              <label class="chip"><input type="checkbox" name="features" value="Payments"><span>Payments</span></label>
+              <label class="chip"><input type="checkbox" name="features" value="Admin login"><span>Admin login</span></label>
+              <label class="chip"><input type="checkbox" name="features" value="Animations"><span>Animations</span></label>
+              <label class="chip"><input type="checkbox" name="features" value="Custom domain"><span>Custom domain</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="details">Describe your idea</label>
+            <textarea id="details" name="details" rows="5" required placeholder="What is the website for, who will use it, and what should it do?"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="links">Example websites you like <span class="opt">(optional)</span></label>
+            <input id="links" name="reference_links" type="text" placeholder="Paste one or more links">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Budget and timing</legend>
+
+          <div class="row">
+            <div class="field">
+              <label for="budget">Budget</label>
+              <select id="budget" name="budget" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Under ₹5,000</option>
+                <option>₹5,000 – ₹15,000</option>
+                <option>₹15,000 – ₹30,000</option>
+                <option>Above ₹30,000</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="deadline">Needed by <span class="opt">(optional)</span></label>
+              <input id="deadline" name="deadline" type="date">
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="submitBtn">Send my order</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div id="success" class="success" hidden>
+        <h3>Order sent.</h3>
+        <p>I got your order and will reply to the email you entered. Check your spam folder if you don't see my reply.</p>
+        <button type="button" id="again">Place another order</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <a href="https://www.youtube.com/@Techi-Utsav" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/Techi_utsav" target="_blank" rel="noopener">Instagram</a>
+  </footer>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    const btn = document.getElementById('submitBtn');
+    const statusEl = document.getElementById('status');
+    const success = document.getElementById('success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      statusEl.className = '';
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const data = new FormData(form);
+      // Turn the checkbox groups into one readable line each
+      data.set('pages', data.getAll('pages').join(', ') || 'None selected');
+      data.set('features', data.getAll('features').join(', ') || 'None selected');
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          form.hidden = true;
+          success.hidden = false;
+          success.querySelector('h3').focus?.();
+          form.reset();
+        } else {
+          throw new Error(json.message || 'Request failed');
+        }
+      } catch (err) {
+        statusEl.className = 'error';
+        statusEl.textContent = 'The order was not sent. Check your internet and try again, or email malikutsav24@gmail.com.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send my order';
+      }
+    });
+
+    document.getElementById('again').addEventListener('click', () => {
+      success.hidden = true;
+      form.hidden = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
